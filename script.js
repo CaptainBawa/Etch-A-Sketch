@@ -1,30 +1,9 @@
-const container = document.querySelector('#container');
-const rows = document.querySelector('.gridRow');
-const cols = document.querySelector('.gridCol');
+let board = document.querySelector('.board');
+board.style.gridTemplateColumns = `repeat(16, 1fr)`;
+board.styleTemplateRow = `repeat(16, 1fr)`;
 
-
-const makeRow = (rowNum) => {
-    for(let i = 0; i < rowNum; i++){
-        let row = document.createElement('div');
-        container.appendChild(row);
-        row.classList.add('gridRow');
-    };
-};
-
-
-const makeCol = (colNum) => {
-    for(let i = 0; i < rows; i++){
-        for(let j = 0; j < colNum; j++){
-            let col = document.createElement('div');
-            rows[j].appendChild(col);
-            col.classList.add('gridCol')
-        };
-    };
-};
-
-
-const makeGrid = () => {
-    makeRow(16);
-    makeCol(16);
-};
-console.log(makeGrid());
+for(let i = 0; i < 256; i++){
+    let square = document.createElement('div');
+    square.style.backgroundColor = 'blue';
+    board.insertAdjacentElement('beforeend', square);
+}
