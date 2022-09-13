@@ -1,16 +1,6 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('#container');
 const rows = document.querySelector('.gridRow');
 const cols = document.querySelector('.gridCol');
-
-
-
-
-
-const makeGrid = () => {
-    makeRow(16);
-    makeCol(16);
-};
-
 
 
 const makeRow = (rowNum) => {
@@ -21,8 +11,9 @@ const makeRow = (rowNum) => {
     };
 };
 
+
 const makeCol = (colNum) => {
-    for(let i = 0; i < rows.length; i++){
+    for(let i = 0; i < rows; i++){
         for(let j = 0; j < colNum; j++){
             let col = document.createElement('div');
             rows[j].appendChild(col);
@@ -30,3 +21,10 @@ const makeCol = (colNum) => {
         };
     };
 };
+
+
+const makeGrid = () => {
+    makeRow(16);
+    makeCol(16);
+};
+console.log(makeGrid());
