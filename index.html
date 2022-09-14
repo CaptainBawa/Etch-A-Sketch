@@ -9,13 +9,15 @@
    <body>
         <div id="container">
          <div><h1>Sketch Pad</h1></div>
+         <div class="mode">Mode:</div>
          <div class="content">
             <div class="board"></div>
             <div class="buttons">
-               <button>Black</button>
-               <button>White</button>
-               <button>Random</button>
-               <button>Reset</button>
+               <button onclick="changeColor('black')">Black</button>
+               <button onclick="changeColor('white')">Eraser</button>
+               <button onclick="changeColor('gray')">Gray</button>
+               <button onclick="changeColor('random')">Random</button>
+               <button onclick="reset()">Reset</button>
             </div>
             <div>
                <input type="text" placeholder="size of box" value="16"
