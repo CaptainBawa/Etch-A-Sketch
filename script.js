@@ -1,3 +1,5 @@
+/* Creating two variables, color and click. The color variable is set to black and the click variable
+is set to true. */
 let color = 'black';
 let click = true;
 
@@ -46,6 +48,11 @@ const changeSize = (val) => {
 };
 
 
+/**
+ * If the click variable is true, and the color variable is set to 'random', then the background color
+ * of the square will be set to a random color. Otherwise, the background color of the square will be
+ * set to the color variable
+ */
 function squareColor() {
     if(click){
         if(color === 'random'){
@@ -74,16 +81,22 @@ const reset = () => {
     let board = document.querySelector('.board');
     let squares = board.querySelectorAll('div');
     squares.forEach((div) => div.style.backgroundColor = 'white');
-}
+};
 
+
+/* Adding an event listener to the body of the page. When the user clicks on the body, it checks if the
+target of the click is a button. If it is not a button, it changes the value of the click variable
+to the opposite of what it was. If it is true, it changes the text content of the mode class to
+'Status: Drawing'. If it is false, it changes the text content of the mode class to 'Status: Not
+Drawing'. */
 document.querySelector('body').addEventListener('click', (e) =>{
   if(e.target.tagName != 'BUTTON'){
     click = !click;
     if(click){
-        document.querySelector('.mode').textContent = 'Drawing'
+        document.querySelector('.mode').textContent = 'Status: Drawing'
     }
     else {
-        document.querySelector('.mode').textContent = 'Not Drawing'
+        document.querySelector('.mode').textContent = 'Status: Not Drawing'
     }
   }
 });
