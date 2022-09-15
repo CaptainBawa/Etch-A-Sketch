@@ -47,12 +47,14 @@ const changeSize = (val) => {
 
 
 function squareColor() {
-    if(color === 'random'){
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
-       }
-        else {
-        this.style.backgroundColor = color;
-    } 
+    if(click){
+        if(color === 'random'){
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+           }
+            else {
+            this.style.backgroundColor = color;
+        } 
+    }
 };
 
 
@@ -74,7 +76,7 @@ const reset = () => {
     squares.forEach((div) => div.style.backgroundColor = 'white');
 }
 
-/*document.querySelector('body').addEventListener('click', (e) => {
+document.querySelector('body').addEventListener('click', (e) =>{
   if(e.target.tagName != 'BUTTON'){
     click = !click;
     if(click){
@@ -84,4 +86,4 @@ const reset = () => {
         document.querySelector('.mode').textContent = 'Not Drawing'
     }
   }
-});*/
+});
