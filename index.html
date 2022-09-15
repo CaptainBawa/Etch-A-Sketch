@@ -13,17 +13,17 @@
          <div class="content">
             <div class="board"></div>
             <div class="buttons">
-               <button onclick="changeColor('black')">Black</button>
-               <button onclick="changeColor('white')">Eraser</button>
-               <button onclick="changeColor('gray')">Gray</button>
-               <button onclick="changeColor('random')">Random</button>
-               <button onclick="reset()">Reset</button>
+               <button class="black" onclick="changeColor('black')">Black</button>
+               <button class="eraser" onclick="changeColor('white')">Eraser</button>
+               <button class="gray" onclick="changeColor('gray')">Gray</button>
+               <button class="random" onclick="changeColor('random')">Random</button>
+               <button class="reset" onclick="reset()">Reset</button>
             </div>
-            <div>
+            <div class="resetSize">
                <input type="text" placeholder="size of box" value="16"
                 onchange="changeSize(this.value)"
                />
-               <button>Set Size</button>
+               <button class="size">Set Size</button>
             </div>
          </div>
         </div>
